@@ -24,13 +24,16 @@ var uploader = WebUploader.create({
 // 当有文件添加进来的时候
 uploader.on('fileQueued', function (file) {
   console.log(file);
-  
+  if (file.size == 0) {
+    return
+  }
+
   var len = $(".file-item").size()
-  
+
   if (len > 2) {
     return
   }
-  
+
   // var $li = $(
   //   '<div id="' + file.id + '" class="file-item thumbnail">' +
   //   '<img>' +
@@ -41,28 +44,47 @@ uploader.on('fileQueued', function (file) {
 
   var $li = $(
     '<div id="' + file.id + '" class = "file-item">' +
-      '<span>'+file.name+ '</span>'+'<span class="delete">删除</span>'+
+    '<span class="file-name">' + file.name + '</span>' +
+    '<div class="delete-wrap">' +
+    '<span class="delete">删除</span>' +
+    '<img src="./statics/close.png" class = "close">' +
+    '<img src="./statics/close1.png" class = "close1">' +
+    '</div>' +
     '</div>'
   )
 
 
   // 容器jQuery实例
   $("#fileList").append($li);
-  $("#"+file.id + '> .delete').click(function(e) {
-    uploader.removeFile( file );
-    $('#fileList').children("#"+file.id).remove(); 
+  $("#" + file.id + '> .delete-wrap').click(function (e) {
+    uploader.removeFile(file);
+    $('#fileList').children("#" + file.id).remove();
+  });
+  var $img = $('.img-detail')
+  uploader.makeThumb(file, function (error, src) {
+    if (error) {
+      $img.replaceWith('<span>不能预览</span>');
+      return;
+    }
+
+    $img.attr('src', src);
+  }, 300, 300);
+  $("#" + file.id + '> .file-name').click(function (e) {
+    // 创建缩略图
+    // 如果为非图片文件，可以不用调用此方法。
+    // thumbnailWidth x thumbnailHeight 为 100 x 100
+    uploader.makeThumb(file, function (error, src) {
+      if (error) {
+        $img.replaceWith('<span>不能预览</span>');
+        return;
+      }
+
+      $img.attr('src', src);
+    }, 300, 300);
+    $('.show-wrap').html($img)
   });
 
-  // 创建缩略图
-  // 如果为非图片文件，可以不用调用此方法。
-  // thumbnailWidth x thumbnailHeight 为 100 x 100
-  // uploader.makeThumb(file, function (error, src) {
-  //   if (error) {
-  //     $img.replaceWith('<span>不能预览</span>');
-  //     return;
-  //   }
 
-  //   $img.attr('src', src);
-  // }, 100, 100);
+
 });
 

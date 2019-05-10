@@ -63,13 +63,16 @@ html {
   border-top: none;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .tab-pane {
-  padding-top: 10px;
+  padding-top: 1%;
+  height: 100%;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap {
   display: flex;
+  height: 100%;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap {
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
 }
@@ -79,14 +82,23 @@ html {
   flex-direction: column;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .explain {
+  max-height: 10%;
+  overflow: hidden;
   font-size: 10px;
   color: #999;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .explain .warn-img {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .webuploader-pick {
   background-color: #F0F2F5;
   color: #000;
-  padding: 10px 35px;
+  padding: 5% 15%;
   font-size: 12px;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list {
@@ -99,11 +111,57 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete {
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .file-name {
+  flex-grow: 1;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap {
+  display: flex;
+  align-items: center;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap:hover {
+  cursor: pointer;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap:hover .delete {
+  color: red;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap:hover .close {
+  display: none;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap:hover .close1 {
+  display: inline-block;
+  opacity: 1;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap .delete {
   font-size: 10px;
   color: #999;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap .close {
+  width: 10px;
+  height: 10px;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap .close1 {
+  width: 15px;
+  height: 15px;
+  display: none;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .submit {
+  width: fit-content;
+  padding: 5% 15%;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background-color: #95C16C;
+  margin-top: 10%;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap .show-wrap {
+  flex: 1;
+  height: 100%;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap .show-wrap .img-detail {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .main-container .main-wrap .main-bottom {
   flex: 1;

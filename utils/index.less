@@ -70,14 +70,17 @@ html {
           border-top: none;
 
           .tab-pane {
-            padding-top: 10px;
+            padding-top: 1%;
+            height: 100%;
           }
 
           .wrap {
             display: flex;
+            height: 100%;
 
             #uploader-wrap {
               width: 50%;
+              height: 100%;
               display: flex;
               justify-content: center;
 
@@ -87,15 +90,25 @@ html {
                 flex-direction: column;
 
                 .explain {
+                  max-height: 10%;
+                  overflow: hidden;
                   font-size: 10px;
                   color: #999;
-                  margin-bottom: 20px;
+                  margin-bottom: 5%;
+                  display: flex;
+                  align-items: center;
+
+                  .warn-img {
+                    margin-right: 5px;
+                    width: 15px;
+                    height: 15px;
+                  }
                 }
 
                 .webuploader-pick {
                   background-color: #F0F2F5;
                   color: #000;
-                  padding: 10px 35px;
+                  padding: 5% 15%;
                   font-size: 12px;
                 }
 
@@ -109,14 +122,74 @@ html {
                     width: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
 
-                    .delete {
-                      font-size: 10px;
-                      color: #999;
+                    // justify-content: space-between;
+                    .file-name {
+                      flex-grow: 1;
+                    }
+
+                    .delete-wrap {
+                      display: flex;
+                      align-items: center;
+
+                      &:hover {
+                        cursor: pointer;
+
+                        .delete {
+                          color: red;
+                        }
+
+                        .close {
+                          display: none;
+                        }
+
+                        .close1 {
+                          display: inline-block;
+                          opacity: 1;
+                        }
+
+                      }
+
+                      .delete {
+                        font-size: 10px;
+                        color: #999;
+                      }
+
+                      .close {
+                        width: 10px;
+                        height: 10px;
+                      }
+
+                      .close1 {
+                        width: 15px;
+                        height: 15px;
+                        display: none;
+                      }
                     }
                   }
                 }
+
+                .submit {
+                  width: fit-content;
+                  padding: 5% 15%;
+                  box-sizing: border-box;
+                  text-align: center;
+                  color: #fff;
+                  background-color: #95C16C;
+                  margin-top: 10%;
+                }
+              }
+
+
+            }
+
+            .show-wrap {
+              flex: 1;
+              height: 100%;
+              .img-detail {
+                width: 100%;
+                height: 100%;
+                text-align: center;
               }
             }
           }
