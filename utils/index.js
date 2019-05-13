@@ -20,3 +20,16 @@ $('.show-wrap2').click(e => {
 $('.big-mask').click(e=>{
   $('.big-mask').removeClass('show-it')
 })
+
+$('.submit').click(e=> {
+  $('.main-container').removeClass('display-flex')
+  $('.main-container').addClass('display-none')
+  $('.content-container').removeClass('display-none')
+  $('.content-container').addClass('display-flex')
+})
+$('.go-back').click(e=> {
+  $('.content-container').removeClass('display-flex')
+  $('.content-container').addClass('display-none')
+  $('.main-container').removeClass('display-none')
+  $('.main-container').addClass('display-flex')
+})

@@ -1,0 +1,34 @@
+.content-container {
+  flex: 1;
+  width: 100%;
+  background-color: #F1F1F1;
+  justify-content: center;
+  display: none;
+}
+.content-container .content-wrap {
+  margin-top: 20px;
+  width: 60%;
+  height: 90%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.content-container .content-wrap .go-back {
+  position: absolute;
+  right: -100px;
+  top: 20px;
+  background-color: #E5E5E5;
+  padding: 10px;
+  font-size: 12px;
+  color: #969696;
+  display: flex;
+  align-items: center;
+}
+.content-container .content-wrap .go-back img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
