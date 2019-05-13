@@ -135,7 +135,6 @@ html {
                     display: flex;
                     align-items: center;
 
-                    // justify-content: space-between;
                     .file-name {
                       flex-grow: 1;
 
@@ -207,6 +206,10 @@ html {
               height: 100%;
               position: relative;
 
+              &:hover {
+                cursor: pointer;
+              }
+
               .mask {
                 position: absolute;
                 width: 100%;
@@ -235,10 +238,6 @@ html {
                 color: #fff;
                 transform: translate(-50%, -50%);
                 z-index: 2;
-
-                &:hover {
-                  cursor: pointer;
-                }
 
                 img {
                   width: 30px;
@@ -281,7 +280,6 @@ html {
         img {
           width: 150px;
           height: 100%;
-          // margin-right: 20px;
           background-color: #D8D8D8;
         }
       }
@@ -307,4 +305,26 @@ html {
       font-size: 12px;
     }
   }
+}
+
+.big-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.2);
+  left: 0;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  .big-img {
+    width: 80%;
+    height: 70%;
+  }
+}
+.show-it {
+  display: flex !important;
+  visibility: visible;
 }
