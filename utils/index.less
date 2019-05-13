@@ -41,13 +41,20 @@ html {
     padding: 10px;
     box-sizing: border-box;
 
-    .title {
-      font-size: 16px;
-    }
-
     .main-top {
       height: 60%;
       width: 100%;
+      padding-top: 10px;
+
+      .title {
+        font-size: 16px;
+      }
+
+      .text {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
 
       .word-wrap {
         height: 100%;
@@ -61,6 +68,11 @@ html {
           a {
             font-size: 12px;
             color: #000;
+
+            img {
+              width: 10px;
+              height: 10px;
+            }
           }
         }
 
@@ -221,12 +233,17 @@ html {
                 left: 50%;
                 top: 50%;
                 color: #fff;
-                transform: translate(-50%,-50%);
+                transform: translate(-50%, -50%);
                 z-index: 2;
+
+                &:hover {
+                  cursor: pointer;
+                }
 
                 img {
                   width: 30px;
                   height: 30px;
+                  margin-bottom: 10px;
                 }
               }
             }
@@ -238,7 +255,36 @@ html {
     .main-bottom {
       flex: 1;
       width: 100%;
-      background-color: blue;
+      display: flex;
+      flex-direction: column;
+
+      .title-wrap {
+        margin-bottom: 10px;
+
+        .text {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+
+        .title {
+          font-size: 16px;
+        }
+      }
+
+      .imgs-wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+          width: 150px;
+          height: 100%;
+          // margin-right: 20px;
+          background-color: #D8D8D8;
+        }
+      }
     }
   }
 }
