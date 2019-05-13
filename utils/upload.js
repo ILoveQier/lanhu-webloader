@@ -22,16 +22,16 @@ var uploader = WebUploader.create({
   }
 });
 // 当有文件添加进来的时候
-uploader.on('fileQueued', function (file) {
-  console.log(file);
+uploader.on('beforeFileQueued', function (file) {
   if (file.size == 0) {
-    return
+    return false
   }
-
+  
   var len = $(".file-item").size()
-
+  
   if (len > 2) {
-    return
+    uploader.removeFile(file);
+    return false
   }
 
   // var $li = $(
@@ -57,7 +57,7 @@ uploader.on('fileQueued', function (file) {
   // 容器jQuery实例
   $("#fileList").append($li);
   $("#" + file.id + '> .delete-wrap').click(function (e) {
-    uploader.removeFile(file);
+    uploader.removeFile(file,true);
     $('#fileList').children("#" + file.id).remove();
   });
   var $img = $('.img-detail')
