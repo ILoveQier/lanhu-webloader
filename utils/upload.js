@@ -73,17 +73,3 @@ uploader.on('beforeFileQueued', function (file) {
     }, 300, 300);
   });
 });
-
-// 点击显示大图
-$('.show-wrap').click(e => {
-  var imgsrc = $('.img-detail').attr('src')
-  if (imgsrc) {
-    $('.big-img').attr('src',imgsrc)
-  } else {
-    return
-  }
-  $('.big-mask').addClass('show-it')
-})
-$('.big-mask').click(e=>{
-  $('.big-mask').removeClass('show-it')
-})
