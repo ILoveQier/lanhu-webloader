@@ -26,22 +26,11 @@ uploader.on('beforeFileQueued', function (file) {
   if (file.size == 0) {
     return false
   }
-  
   var len = $(".file-item").size()
-  
   if (len > 2) {
     uploader.removeFile(file);
     return false
   }
-
-  // var $li = $(
-  //   '<div id="' + file.id + '" class="file-item thumbnail">' +
-  //   '<img>' +
-  //   '<div class="info">' + file.name + '</div>' +
-  //   '</div>'
-  // ),
-  //   $img = $li.find('img');
-
   var $li = $(
     '<div id="' + file.id + '" class = "file-item">' +
     '<span class="file-name">' + file.name + '</span>' +
@@ -53,11 +42,14 @@ uploader.on('beforeFileQueued', function (file) {
     '</div>'
   )
 
-
   // 容器jQuery实例
   $("#fileList").append($li);
+  $("#" + file.id + '> .file-name').click(function (e) {
+    $('.file-name').removeClass("choose");
+    $(this).addClass("choose")
+  });
   $("#" + file.id + '> .delete-wrap').click(function (e) {
-    uploader.removeFile(file,true);
+    uploader.removeFile(file, true);
     $('#fileList').children("#" + file.id).remove();
   });
   var $img = $('.img-detail')
@@ -66,7 +58,6 @@ uploader.on('beforeFileQueued', function (file) {
       $img.replaceWith('<span>不能预览</span>');
       return;
     }
-
     $img.attr('src', src);
   }, 300, 300);
   $("#" + file.id + '> .file-name').click(function (e) {
@@ -78,13 +69,8 @@ uploader.on('beforeFileQueued', function (file) {
         $img.replaceWith('<span>不能预览</span>');
         return;
       }
-
       $img.attr('src', src);
     }, 300, 300);
-    $('.show-wrap').html($img)
   });
-
-
-
 });
 
