@@ -29,12 +29,13 @@ uploader2.on('beforeFileQueued', function (file) {
   }
   // 容器jQuery实例
   var $img = $('.img-detail2')
-  uploader.makeThumb(file, function (error, src) {
+  uploader2.makeThumb(file, function (error, src) {
     if (error) {
       $img.replaceWith('<span>不能预览</span>');
       return;
     }
     $img.attr('src', src);
   }, 300, 300);
-
+  uploader2.removeFile(file, true)
+  return false
 });
