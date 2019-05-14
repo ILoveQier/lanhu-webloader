@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>蓝狐静态页面</title>
+  <link rel="stylesheet" href="./utils/index.css">
+  <link rel="stylesheet" href="./utils/content.css">
+  <!--引入CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/webuploader/0.1.1/webuploader.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="layout-container">
+    <div class="header-container">
+      <span class="title">知语</span>
+    </div>
+    <div class="main-container">
+      <div class="main-wrap">
+        <div class="main-top">
+          <img src="./statics/text.png" class="text">
+          <span class="title">在线文字识别</span>
+          <div class="word-wrap">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active navli">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                  <img src="./statics/doc.png" alt="">
+                  <span>文档识别</span>
+                </a>
+              </li>
+              <li role="presentation" class="navli">
+                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                  <img src="./statics/Excel.png" alt="">
+                  <span>表格识别</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="wrap">
+                  <div id="uploader-wrap">
+                    <!--用来存放item-->
+                    <div class="pic-wrap">
+                      <div id="filePicker">选择图片</div>
+                      <div class="explain">
+                        <img src="./statics/warn.png" class="warn-img">
+                        <span>一次最多识别三张图片</span>
+                      </div>
+                      <div id="fileList" class="uploader-list"></div>
+                      <span class="submit">提交</span>
+                    </div>
+                  </div>
+                  <div class="show-wrap">
+                    <div class="mask"></div>
+                    <img src="" class="img-detail" alt="请选择图片">
+                    <div class="big">
+                      <img src="./statics/big.png">
+                      <span>查看原图</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="wrap2">
+                  <div id="uploader-wrap2">
+                    <!--用来存放item-->
+                    <div class="pic-wrap2">
+                      <div id="filePicker2">选择图片</div>
+                      <div id="fileList2" class="uploader-list2">
+                        <div class="color-input-green"><input type="checkbox" checked id="color-input-red">
+                          <label for="color-input-red"></label> 表格主体</div>
+                        <div class="color-input-green"><input type="checkbox" checked id="color-input-red2">
+                          <label for="color-input-red2"></label> 列结构不一致</div>
+                      </div>
+                      <span class="submit">提交</span>
+                    </div>
+                  </div>
+                  <div class="show-wrap2">
+                    <div class="mask"></div>
+                    <img src="" class="img-detail2" alt="请选择图片">
+                    <div class="big">
+                      <img src="./statics/big.png">
+                      <span>查看原图</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-bottom">
+          <div class="title-wrap">
+            <img src="./statics/text.png" class="text">
+            <span class="title">示例图片</span>
+          </div>
+          <div class="imgs-wrap">
+            <img src="./statics/10.jpg">
+            <img src="./statics/6.jpg">
+            <img src="./statics/7.jpg">
+            <img src="./statics/7.jpg">
+            <img src="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="content-wrap">
+        <div class="content-left" id="navbar-example">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default" role="presentation">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    第一页(共70页)
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="collapse in " role="tabpanel" aria-labelledby="headingOne">
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#title-1">这里是主标题的内容</a></li>
+                  <li><a href="#title-2">这里是一级标题的内容</a></li>
+                  <li><a href="#title-3">图1</a></li>
+                  <li><a href="#title-4">这里是二级标题的内容</a></li>
+                  <li><a href="#title-5">这里是三级标题的内容</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default" role="presentation">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    第二页(共70页)
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#title-6">666</a></li>
+                  <li><a href="#title-7">777</a></li>
+                  <li><a href="#title-8">图81</a></li>
+                  <li><a href="#title-9">99</a></li>
+                  <li><a href="#title-10">这里是主标010题的内容</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-right" data-spy="scroll" data-target="#navbar-example" data-offset="100">
+          <div class="page1">
+            <h2 id="title-1">这里是主标题内容</h2>
+            <p>这里是福标题内容</p>
+            <h4 id="title-2">这里是一级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <h4 id="title-3">图1（图注）</h4>
+            <img src="./statics/7.jpg" style="width:100px;height:100px">
+            <h4 id="title-4">这里是2级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <h4 id="title-5">这里是3级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+          </div>
+          <div class="page2">
+            <h2 id="title-6">6</h2>
+            <p>这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容</p>
+            <h4 id="title-7">7</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <img src="./statics/6.jpg" style="width:100px;height:100px">
+            <h4 id="title-8">8</h4>
+            <h4 id="title-9">9999</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <h4 id="title-10">这里10是3级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+          </div>
+        </div>
+        <div class="go-back">
+          <span>返回</span>
+          <img src="./statics/back.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <span>蓝狐思远科技（北京）有限公司</span>
+      <span>京ICP备XXXXXXXXXX号</span>
+    </div>
+  </div>
+  <div class="big-mask">
+    <img src="" class="big-img">
+  </div>
+</body>
+
+</html>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!--引入JS-->
+<script src="https://cdn.bootcss.com/less.js/3.9.0/less.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/webuploader/0.1.1/webuploader.html5only.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="./utils/upload.js"></script>
+<script src="./utils/upload2.js"></script>
+<script src="./utils/index.js"></script>
