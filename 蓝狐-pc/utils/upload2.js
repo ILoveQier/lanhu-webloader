@@ -35,7 +35,7 @@ uploader2.on('beforeFileQueued', function (file) {
       return;
     }
     $img.attr('src', src);
-  }, 300, 300);
+  }, 500, 300);
   uploader2.removeFile(file, true)
   return false
 });

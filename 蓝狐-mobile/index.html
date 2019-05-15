@@ -63,7 +63,7 @@
                         <span>一次最多识别三张图片</span>
                       </div>
                       <div id="fileList" class="uploader-list"></div>
-                      <span class="submit">提交</span>
+                      <span class="submit" data-toggle="modal" data-target="#myModal">提交</span>
                     </div>
                   </div>
                 </div>
@@ -80,7 +80,7 @@
                         <div class="color-input-green"><input type="checkbox" checked id="color-input-red2">
                           <label for="color-input-red2"></label> 列结构不一致</div>
                       </div>
-                      <span class="submit">提交</span>
+                      <span class="submit" data-toggle="modal" data-target="#myModal">提交</span>
                     </div>
                   </div>
                 </div>
@@ -110,6 +110,13 @@
   <div class="big-mask">
     <img src="" class="big-img">
   </div>
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="myModal"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-wrap">
+      <span>上传文件</span>
+      <span>照片和视频</span>
+      <span>手机文件</span>
+    </div><!-- /.modal -->
 </body>
 
 </html>

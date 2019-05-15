@@ -59,17 +59,18 @@ uploader.on('beforeFileQueued', function (file) {
       return;
     }
     $img.attr('src', src);
-  }, 300, 300);
+  },500,300);
   $("#" + file.id + '> .file-name').click(function (e) {
     // 创建缩略图
     // 如果为非图片文件，可以不用调用此方法。
     // thumbnailWidth x thumbnailHeight 为 100 x 100
+    
     uploader.makeThumb(file, function (error, src) {
       if (error) {
         $img.replaceWith('<span>不能预览</span>');
         return;
       }
       $img.attr('src', src);
-    }, 300, 300);
+    }, 500, 300);
   });
 });
