@@ -25,9 +25,7 @@ $('.show-wrap2').hover(function () {
   $('.show-wrap2 .big').addClass('hide-it')
 });
 $('.imgs-wrap > .img-item').click(e => {
-  console.log(e);
   var imgsrc = e.currentTarget.children[0].src
-  
   if (imgsrc) {
     $('.big-img').attr('src', imgsrc)
   } else {

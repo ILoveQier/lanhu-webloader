@@ -18,9 +18,8 @@ html {
   font-size: 30px;
   border-top: 2px solid #95C16C;
 }
-.header-container .title {
-  color: #235169;
-  font-size: 24px;
+.header-container img {
+  width: 150px;
   margin-left: 20%;
 }
 .main-container {
