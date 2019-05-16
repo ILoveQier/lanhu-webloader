@@ -17,9 +17,11 @@ html {
   background-color: #fff;
   line-height: 50px;
   font-size: 30px;
+  border-top: 2px solid #95C16C;
 }
-.header-container .title {
-  margin-left: 20%;
+.header-container img {
+  width: 120px;
+  margin-left: 5%;
 }
 .main-container {
   flex: 1;
@@ -130,9 +132,12 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .file-name {
-  flex-grow: 1;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .file-name:hover {
   color: #99e94e;
@@ -142,8 +147,10 @@ html {
   color: #99e94e;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap {
+  width: 30%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list .file-item .delete-wrap:hover {
   cursor: pointer;

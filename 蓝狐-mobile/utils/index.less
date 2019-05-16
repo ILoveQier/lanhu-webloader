@@ -19,9 +19,11 @@ html {
   background-color: #fff;
   line-height: 50px;
   font-size: 30px;
+  border-top: 2px solid #95C16C;
 
-  .title {
-    margin-left: 20%;
+  img {
+    width: 120px;
+    margin-left: 5%;
   }
 }
 
@@ -148,9 +150,12 @@ html {
                     width: 100%;
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
 
                     .file-name {
-                      flex-grow: 1;
+                      width: 50%;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
 
                       &:hover {
                         color: rgb(153, 233, 78);
@@ -163,8 +168,10 @@ html {
                     }
 
                     .delete-wrap {
+                      width: 30%;
                       display: flex;
                       align-items: center;
+                      justify-content: space-between;
 
                       &:hover {
                         cursor: pointer;
