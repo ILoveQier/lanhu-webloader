@@ -22,10 +22,10 @@ $('.big-mask').click(e=>{
 })
 
 $('.submit').click(e=> {
-  // $('.main-container').removeClass('display-flex')
-  // $('.main-container').addClass('display-none')
-  // $('.content-container').removeClass('display-none')
-  // $('.content-container').addClass('display-flex')
+  $('.main-container').removeClass('display-flex')
+  $('.main-container').addClass('display-none')
+  $('.content-container').removeClass('display-none')
+  $('.content-container').addClass('display-flex')
 })
 $('.go-back').click(e=> {
   $('.content-container').removeClass('display-flex')

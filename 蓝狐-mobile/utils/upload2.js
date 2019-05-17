@@ -39,3 +39,5 @@ uploader2.on('beforeFileQueued', function (file) {
   uploader2.removeFile(file, true)
   return false
 });
+$('#myModal2').modal('hide')
+

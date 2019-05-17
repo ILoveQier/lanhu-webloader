@@ -72,4 +72,5 @@ uploader.on('beforeFileQueued', function (file) {
       $img.attr('src', src);
     }, 300, 300);
   });
+  $('#myModal').modal('hide')
 });

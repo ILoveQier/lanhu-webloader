@@ -8,17 +8,18 @@
   .content-wrap {
     background-color: #fff;
     margin-top: 20px;
-    width: 60%;
-    height: 90%;
+    width: 90%;
+    height: 85%;
     display: flex;
     box-sizing: border-box;
     position: relative;
 
     .content-left {
-      width: 30%;
+      width: 40%;
       border-right: 1px solid #999;
       padding: 20px;
       box-sizing: border-box;
+      overflow: scroll;
 
       .panel-group {
         .panel-default {
@@ -52,14 +53,14 @@
 
     .go-back {
       position: absolute;
-      right: -100px;
-      top: 20px;
       background-color: #E5E5E5;
       padding: 10px;
       font-size: 12px;
       color: #969696;
       display: flex;
       align-items: center;
+      bottom: -50px;
+      left: 40%;
 
       &:hover {
         cursor: pointer;

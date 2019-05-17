@@ -57,13 +57,13 @@
                   <div id="uploader-wrap">
                     <!--用来存放item-->
                     <div class="pic-wrap">
-                      <div id="filePicker">选择图片</div>
+                      <div class="choose-pic" data-toggle="modal" data-target="#myModal">选择图片</div>
                       <div class="explain">
                         <img src="./statics/warn.png" class="warn-img">
                         <span>一次最多识别三张图片</span>
                       </div>
                       <div id="fileList" class="uploader-list"></div>
-                      <span class="submit" data-toggle="modal" data-target="#myModal">提交</span>
+                      <span class="submit">提交</span>
                     </div>
                   </div>
                 </div>
@@ -73,14 +73,14 @@
                   <div id="uploader-wrap2">
                     <!--用来存放item-->
                     <div class="pic-wrap2">
-                      <div id="filePicker2">选择图片</div>
+                      <div class="choose-pic" data-toggle="modal" data-target="#myModal2">选择图片</div>
                       <div id="fileList2" class="uploader-list2">
                         <div class="color-input-green"><input type="checkbox" checked id="color-input-red">
                           <label for="color-input-red"></label> 表格主体</div>
                         <div class="color-input-green"><input type="checkbox" checked id="color-input-red2">
                           <label for="color-input-red2"></label> 列结构不一致</div>
                       </div>
-                      <span class="submit" data-toggle="modal" data-target="#myModal">提交</span>
+                      <span class="submit">提交</span>
                     </div>
                   </div>
                 </div>
@@ -102,6 +102,94 @@
         </div>
       </div>
     </div>
+    <div class="content-container">
+      <div class="content-wrap">
+        <div class="content-left" id="navbar-example">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default" role="presentation">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    第一页(共70页)
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="collapse in " role="tabpanel" aria-labelledby="headingOne">
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#title-1">这里是主标题的内容</a></li>
+                  <li><a href="#title-2">这里是一级标题的内容</a></li>
+                  <li><a href="#title-3">图1</a></li>
+                  <li><a href="#title-4">这里是二级标题的内容</a></li>
+                  <li><a href="#title-5">这里是三级标题的内容</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default" role="presentation">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    第二页(共70页)
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#title-6">666</a></li>
+                  <li><a href="#title-7">777</a></li>
+                  <li><a href="#title-8">图81</a></li>
+                  <li><a href="#title-9">99</a></li>
+                  <li><a href="#title-10">这里是主标010题的内容</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-right" data-spy="scroll" data-target="#navbar-example" data-offset="100">
+          <div class="page1">
+            <h2 id="title-1">这里是主标题内容</h2>
+            <p>这里是福标题内容</p>
+            <h4 id="title-2">这里是一级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <h4 id="title-3">图1（图注）</h4>
+            <img src="./statics/7.jpg" style="width:100px;height:100px">
+            <h4 id="title-4">这里是2级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <h4 id="title-5">这里是3级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+          </div>
+          <div class="page2">
+            <h2 id="title-6">6</h2>
+            <p>这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容这里是福标题内容</p>
+            <h4 id="title-7">7</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <img src="./statics/6.jpg" style="width:100px;height:100px">
+            <h4 id="title-8">8</h4>
+            <h4 id="title-9">9999</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+            <h4 id="title-10">这里10是3级标题</h4>
+            <p>
+              这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+            </p>
+          </div>
+        </div>
+        <div class="go-back">
+          <span>返回</span>
+          <img src="./statics/back.png" alt="">
+        </div>
+      </div>
+    </div>
     <div class="footer-container">
       <span>蓝狐思远科技（北京）有限公司</span>
       <span>京ICP备XXXXXXXXXX号</span>
@@ -111,12 +199,21 @@
     <img src="" class="big-img">
   </div>
   <!-- 模态框（Modal） -->
-  <div class="modal fade" id="myModal"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-wrap">
-      <span>上传文件</span>
-      <span>照片和视频</span>
-      <span>手机文件</span>
-    </div><!-- /.modal -->
+      <div>上传文件</div>
+      <div id="filePicker">照片和视频</div>
+      <div>手机文件</div>
+    </div>
+  </div><!-- /.modal -->
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="myModal2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-wrap">
+      <div>上传文件</div>
+      <div id="filePicker2">照片和视频</div>
+      <div>手机文件</div>
+    </div>
+  </div><!-- /.modal -->
 </body>
 
 </html>

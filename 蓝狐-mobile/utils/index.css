@@ -100,6 +100,15 @@ html {
   align-items: center;
   margin-bottom: 20px;
 }
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .choose-pic {
+  background-color: #F0F2F5;
+  color: #000;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+}
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .explain {
   font-size: 10px;
   color: #999;
@@ -111,15 +120,6 @@ html {
   margin-right: 5px;
   width: 15px;
   height: 15px;
-}
-.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .webuploader-container {
-  width: 100%;
-}
-.main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .webuploader-pick {
-  background-color: #F0F2F5;
-  color: #000;
-  font-size: 12px;
-  width: 100%;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap #uploader-wrap .pic-wrap .uploader-list {
   display: flex;
@@ -206,6 +206,15 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.main-container .main-wrap .main-top .word-wrap .tab-content .wrap2 #uploader-wrap2 .pic-wrap2 .choose-pic {
+  background-color: #F0F2F5;
+  color: #000;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
 }
 .main-container .main-wrap .main-top .word-wrap .tab-content .wrap2 #uploader-wrap2 .pic-wrap2 .webuploader-container {
   width: 100%;
@@ -335,6 +344,10 @@ html {
 .display-none {
   display: none !important;
 }
+#filePicker div:nth-child(2) {
+  width: 100% !important;
+  height: 100% !important;
+}
 #filePicker2 div:nth-child(2) {
   width: 100% !important;
   height: 100% !important;
@@ -351,11 +364,22 @@ html {
   display: flex;
   flex-direction: column;
 }
-.modal-wrap span {
+.modal-wrap > div {
   margin: 10px;
   font-weight: bold;
 }
-.modal-wrap span:nth-child(1) {
+.modal-wrap > div:nth-child(1) {
   font-size: 12px;
   color: #999;
+}
+.modal-wrap .webuploader-container {
+  width: 100%;
+}
+.modal-wrap .webuploader-container .webuploader-pick {
+  background-color: #fff !important;
+  padding: 0;
+  text-align: left;
+  color: #000;
+  font-size: 12px;
+  width: 100%;
 }
